@@ -18,6 +18,13 @@ public class conwaysTestCases {
 					{0,0,0,1,1,0,0,0},
 					{0,0,0,1,1,0,0,0}};
 	
+	int[][] nextGen = {{0,1,0,0,0,0,0,0},
+					   {0,1,0,0,0,1,1,1},
+					   {0,1,0,0,0,0,0,0},
+					   {0,0,0,0,0,0,0,0},
+					   {0,0,0,1,1,0,0,0},
+					   {0,0,0,1,1,0,0,0}};
+	
 	int[][]wrong = {{0,1,0},
 					{0,0,0},
 	   				{2,1,4}};
@@ -52,6 +59,13 @@ public class conwaysTestCases {
 		assertEquals(1,life.gameOfLifeRules(1,neighbors));
 		assertEquals(1,life.gameOfLifeRules(0,neighbors));
 	
+	}
+	
+	@Test
+	public void testNextGeneration(){
+		
+		assertEqual(nextGen,life.nextGeneration(grid));
+		
 	}
 	}
 
