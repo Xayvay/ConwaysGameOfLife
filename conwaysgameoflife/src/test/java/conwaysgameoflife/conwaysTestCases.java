@@ -42,6 +42,7 @@ public class conwaysTestCases {
 	@Test
 	public void testGameOfLifeRules(){
 		int neighbors = 0;
+		assertEquals(0,life.gameOfLifeRules(0,neighbors));
 		assertEquals(0,life.gameOfLifeRules(1,neighbors));
 		neighbors = 4;
 		assertEquals(0,life.gameOfLifeRules(1,neighbors));

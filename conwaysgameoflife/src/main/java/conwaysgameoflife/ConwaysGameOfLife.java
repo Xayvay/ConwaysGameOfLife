@@ -37,4 +37,20 @@ public class ConwaysGameOfLife {
 		
 		return count;
 	}
+	
+	public int gameOfLifeRules(int cellLife,int neighbors){
+		
+		
+		if(cellLife == 1 && neighbors < 2){
+			return 0;
+		} else if (cellLife == 1 && neighbors > 3){
+			return 0;
+		} else if (cellLife == 1 && (neighbors == 2 || neighbors == 3)){
+			return cellLife;
+		} else if (cellLife == 0 && neighbors == 3){
+			return 1;
+		}
+		
+		return cellLife;
+	}
 }
