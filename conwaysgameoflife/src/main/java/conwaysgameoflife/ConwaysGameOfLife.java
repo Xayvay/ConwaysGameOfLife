@@ -24,4 +24,14 @@ public class ConwaysGameOfLife {
 		return true;
 	}
 
+	public int howManyNeighbors(int[][]grid,int rowPos, int colPos){
+		int count = 0;
+		
+		for(int x = -1; x<= 1; x++){
+			for(int y = -1; y<=1 ; y++){
+				count += grid[rowPos + x][colPos + y];
+			}
+		}
+		return count;
+	}
 }

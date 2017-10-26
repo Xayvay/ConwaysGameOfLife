@@ -35,7 +35,7 @@ public class conwaysTestCases {
 	public void testHowManyNeighbors(){
 		
 		int count = 0;
-		count = life.testHowManyNeighbors(grid,1,1);
+		count = life.howManyNeighbors(grid,1,1);
 		assertEquals(2,count);
 	}
 	}
