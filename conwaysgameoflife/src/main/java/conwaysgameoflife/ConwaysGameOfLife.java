@@ -29,7 +29,11 @@ public class ConwaysGameOfLife {
 		
 		for(int x = -1; x<= 1; x++){
 			for(int y = -1; y<=1 ; y++){
+				if( (rowPos+x) < 0 || (rowPos+x) > grid.length-1 || (colPos + y) < 0 || (colPos+y) > grid[0].length-1){
+					continue;
+				} else {
 				count += grid[rowPos + x][colPos + y];
+				}
 			}
 		}
 		
@@ -52,5 +56,18 @@ public class ConwaysGameOfLife {
 		}
 		
 		return cellLife;
+	}
+	
+	public int[][] nextGeneration(int[][] grid){
+		int[][]nextGen = new int[grid.length][grid[0].length];
+		int neighbors = 0;
+		
+		for(int row = 0; row < grid.length;row++){
+			for(int col = 0; col < grid[0].length;col++){
+				neighbors = howManyNeighbors(grid,row,col);
+				nextGen[row][col] = gameOfLifeRules(grid[row][col],neighbors);
+			}
+		}
+		return nextGen;
 	}
 }

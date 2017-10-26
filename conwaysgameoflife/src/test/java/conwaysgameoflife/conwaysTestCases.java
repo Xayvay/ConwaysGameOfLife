@@ -64,7 +64,16 @@ public class conwaysTestCases {
 	@Test
 	public void testNextGeneration(){
 		
-		assertEqual(nextGen,life.nextGeneration(grid));
+		int[][] check = life.nextGeneration(grid);
+		for(int x = 0; x < nextGen.length;x++){
+			for(int y = 0; y< nextGen[0].length; y++){
+			assertEquals(nextGen[x][y],check[x][y]);
+			}
+		}
+		
+		assertEquals(nextGen,life.nextGeneration(grid));
+		
+		
 		
 	}
 	}
