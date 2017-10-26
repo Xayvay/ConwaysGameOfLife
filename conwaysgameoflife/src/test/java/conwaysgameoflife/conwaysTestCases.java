@@ -25,7 +25,7 @@ public class conwaysTestCases {
 						{0,0,0},
 		   				{2,1,4}};
 		
-		asserEquals(true,life.isAccurateGrid());
+		assertEquals(true,life.isAccurateGrid(grid));
 		}
 	}
 
