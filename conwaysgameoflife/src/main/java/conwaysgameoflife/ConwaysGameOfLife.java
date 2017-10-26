@@ -32,6 +32,9 @@ public class ConwaysGameOfLife {
 				count += grid[rowPos + x][colPos + y];
 			}
 		}
+		
+		count -= grid[rowPos][colPos];
+		
 		return count;
 	}
 }

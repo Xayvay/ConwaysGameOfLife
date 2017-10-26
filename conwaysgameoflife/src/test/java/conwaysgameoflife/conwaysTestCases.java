@@ -38,5 +38,19 @@ public class conwaysTestCases {
 		count = life.howManyNeighbors(grid,1,1);
 		assertEquals(2,count);
 	}
+	
+	@Test
+	public void testGameOfLifeRules(){
+		int neighbors = 0;
+		assertEquals(0,life.gameOfLifeRules(1,neighbors));
+		neighbors = 4;
+		assertEquals(0,life.gameOfLifeRules(1,neighbors));
+		neighbors = 2;
+		assertEquals(1,life.gameOfLifeRules(1,neighbors));
+		neighbors = 3;
+		assertEquals(1,life.gameOfLifeRules(1,neighbors));
+		assertEquals(1,life.gameOfLifeRules(0,neighbors));
+	
+	}
 	}
 
